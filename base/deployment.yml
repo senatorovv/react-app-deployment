@@ -16,6 +16,6 @@ spec:
       containers:
         - name: python-app
           image: >-
-            test:1234567
+            $BUILD_NUMBER
           ports:
             - containerPort: 8080
