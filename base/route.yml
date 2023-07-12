@@ -1,16 +1,13 @@
 kind: Route
 apiVersion: route.openshift.io/v1
 metadata:
-  name: react
-  namespace: app-dev
-  labels:
-    app.kubernetes.io/instance: react-app
+  name: python-basic
 spec:
-  host: react-app-dev.apps.cluster-psp75.psp75.sandbox817.opentlc.com
+  host: python-basic-python.apps.cluster-psp75.psp75.sandbox817.opentlc.com
   to:
     kind: Service
-    name: service
+    name: python-app
     weight: 100
   port:
-    targetPort: web
+    targetPort: '8081'
   wildcardPolicy: None
