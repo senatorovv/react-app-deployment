@@ -4,6 +4,8 @@ metadata:
   name: react
   labels:
     app: react
+   annotations:
+     openshift.io/scc: anyuid
   namespace: app-dev
 spec:
   containers:
