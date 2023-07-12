@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: python-app
+  namespace: app-dev
+spec:
+  selector:
+    matchLabels:
+      app: python-app
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: python-app
+    spec:
+      containers:
+        - name: python-app
+          image: >-
+            registry.hub.docker.com/hybrid2k3/petclinic:6
+          ports:
+            - containerPort: 8080
