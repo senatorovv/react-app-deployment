@@ -16,6 +16,6 @@ spec:
       containers:
         - name: python-app
           image: >-
-            hybrid2k3/petclinic:71
+            hybrid2k3/petclinic:72
           ports:
             - containerPort: 8080
